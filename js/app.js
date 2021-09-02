@@ -9,7 +9,9 @@ var app = new Vue({
         content_html : "<h1>Hola Mundo</h1>",
         text: "Descripcion de nuestra imagen",
         src: "asset/images.jpeg",
-        numero: 13
+        numero: 13,
+        edad: '',
+        errorAction: true
     },
     computed: {
         reversedMessage: function(){
@@ -25,6 +27,12 @@ var app = new Vue({
         },
         decremental(){
             this.numero--
+        }
+    },
+    watch:{
+        //Observadores.
+        numero: function(val){
+            console.log("watch ", val)
         }
     }
 

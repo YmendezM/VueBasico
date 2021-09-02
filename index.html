@@ -12,35 +12,45 @@
 <body>
     <div id="app">
 
-        <router-link to="/foo">Go to Foo</router-link>
-        <router-link to="/bar">Go to Bar</router-link>
+        <router-link to="/">Home</router-link>
+        <router-link to="/list">List</router-link>
 
         <router-view></router-view>
+        
+        
+        
+        
+        
+        
+        <!--Inicio Version 1 -->
+        <!-- <router-link to="/foo">Go to Foo</router-link> -->
+        <!-- <router-link to="/bar">Go to Bar</router-link> -->
 
-
+        <!-- <router-view></router-view> -->
         <!--Manejo de clases con Bin-->
-        <h1 v-bind:class="{ error: errorAction, ok: !errorAction}">Esto es una texto</h1>
+        <!-- <h1 v-bind:class="{ error: errorAction, ok: !errorAction}">Esto es una texto</h1> -->
         <!--No lo renderiza-->
-        <h1 v-if="errorAction">Texto if</h1>
+        <!-- <h1 v-if="errorAction">Texto if</h1> -->
         <!--Lo oculta con css-->
-        <h1 v-show="errorAction">Texto Show</h1>
+        <!-- <h1 v-show="errorAction">Texto Show</h1> -->
 
-        <div v-html="content_html"></div>
-        <img v-bind:src="src" :alt="text" :title="text">
-        {{ message }}
-        <p>Computed reverse message: "{{ reversedMessage }}"</p>
-        <p>{{ calcularSuma(sum, sum) }}</p>
-        <p>El valor de sum es: "{{ sum }}"</p>
-        <button @click="incremental">++</button>
-        <button v-on:click="decremental">--</button>
-        <h1 :style="{color:'blue', fontSize: numero+'px'}">Hola Mundo {{ numero }}</h1>
+        <!-- <div v-html="content_html"></div> -->
+        <!-- <img v-bind:src="src" :alt="text" :title="text"> -->
+        <!-- {{ message }} -->
+        <!-- <p>Computed reverse message: "{{ reversedMessage }}"</p> -->
+        <!-- <p>{{ calcularSuma(sum, sum) }}</p> -->
+        <!-- <p>El valor de sum es: "{{ sum }}"</p> -->
+        <!-- <button @click="incremental">++</button> -->
+        <!-- <button v-on:click="decremental">--</button> -->
+        <!-- <h1 :style="{color:'blue', fontSize: numero+'px'}">Hola Mundo {{ numero }}</h1> -->
 
         <!--Actualizamos en dos vias-->
-        <input v-model="edad" placeholder="edit me">
-        <p>Message is: {{ edad }}</p>
-
+        <!-- <input v-model="edad" placeholder="edit me"> -->
+        <!-- <p>Message is: {{ edad }}</p> -->
+        <!-- Fin v1 -->
 
     </div>
+    <script src="js/component/Lists.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

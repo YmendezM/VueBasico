@@ -1,3 +1,18 @@
+const router = new VueRouter({
+        base: "basicoVue    ",
+        routes:[
+            { path: '/list', component: Lists }
+        ]
+});
+
+var app = new Vue({
+    el: '#app',
+    router
+});
+
+
+
+/* Version 1
 const Foo = { template: '<div>Prueba foo</div>' }
 const Bar = { template: '<div>Prueba bar</div>' }
 
@@ -52,4 +67,4 @@ var app = new Vue({
         }
     }
 
-});
+});*/

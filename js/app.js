@@ -8,7 +8,8 @@ var app = new Vue({
         people : ['Ysrael', 'Ely', 'Montse'],
         content_html : "<h1>Hola Mundo</h1>",
         text: "Descripcion de nuestra imagen",
-        src: "asset/images.jpeg"
+        src: "asset/images.jpeg",
+        numero: 13
     },
     computed: {
         reversedMessage: function(){
@@ -18,6 +19,12 @@ var app = new Vue({
     methods:{
         calcularSuma(value1, value2){
             return value1 + value2
+        },
+        incremental(){
+            this.numero++
+        },
+        decremental(){
+            this.numero--
         }
     }
 

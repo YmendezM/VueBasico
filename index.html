@@ -15,6 +15,11 @@
         <p>Computed reverse message: "{{ reversedMessage }}"</p>
         <p>{{ calcularSuma(sum, sum) }}</p>
         <p>El valor de sum es: "{{ sum }}"</p>
+        <button @click="incremental">++</button>
+        <button v-on:click="decremental">--</button>
+        <h1 :style="{color:'blue', fontSize: numero+'px'}">Hola Mundo {{ numero }}</h1>
+
+
     </div>
     <script src="js/app.js"></script>
 </body>

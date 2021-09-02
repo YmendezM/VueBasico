@@ -6,10 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <LINK REL=StyleSheet HREF="asset/css/style.css" TITLE="Contemporaneo">
     <script src="js/vue.js"></script>
+    <script src="js/vue-router.js"></script>
     <title>Vue Basico</title>
 </head>
 <body>
     <div id="app">
+
+        <router-link to="/foo">Go to Foo</router-link>
+        <router-link to="/bar">Go to Bar</router-link>
+
+        <router-view></router-view>
+
+
         <!--Manejo de clases con Bin-->
         <h1 v-bind:class="{ error: errorAction, ok: !errorAction}">Esto es una texto</h1>
         <!--No lo renderiza-->

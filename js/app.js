@@ -10,7 +10,10 @@ const router = new VueRouter({
 
 var app = new Vue({
     el: '#app',
-    router
+    router,
+    mounted() {
+        console.log(this.$route)
+    },
 });
 
 

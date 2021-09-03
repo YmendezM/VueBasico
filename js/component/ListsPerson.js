@@ -1,7 +1,8 @@
-const Lists = {
-    name: "Lists",
+const ListsPerson = {
+    name: "ListsPerson",
     template: 
     `<div>
+        <lis-alert></lis-alert>
         <ul>
             <li v-for="person in people">{{ person }}</li>
         </ul>

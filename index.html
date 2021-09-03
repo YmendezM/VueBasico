@@ -4,53 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <LINK REL=StyleSheet HREF="asset/css/style.css" TITLE="Contemporaneo">
     <script src="js/vue.js"></script>
     <script src="js/vue-router.js"></script>
     <title>Vue Basico</title>
 </head>
 <body>
-    <div id="app">
+    <div class="container">
+        <div id="app">
 
-        <router-link to="/">Home</router-link>
-        <router-link to="/list">List</router-link>
+        
+                <router-link to="/">Home</router-link>
+                <router-link to="/list_programing">List Programing</router-link>
+                <router-link to="/list_person">List Person</router-link>
+                <router-view></router-view>
+            
+            
+            <!--Inicio Version 1 -->
+            <!-- <router-link to="/foo">Go to Foo</router-link> -->
+            <!-- <router-link to="/bar">Go to Bar</router-link> -->
 
-        <router-view></router-view>
-        
-        
-        
-        
-        
-        
-        <!--Inicio Version 1 -->
-        <!-- <router-link to="/foo">Go to Foo</router-link> -->
-        <!-- <router-link to="/bar">Go to Bar</router-link> -->
+            <!-- <router-view></router-view> -->
+            <!--Manejo de clases con Bin-->
+            <!-- <h1 v-bind:class="{ error: errorAction, ok: !errorAction}">Esto es una texto</h1> -->
+            <!--No lo renderiza-->
+            <!-- <h1 v-if="errorAction">Texto if</h1> -->
+            <!--Lo oculta con css-->
+            <!-- <h1 v-show="errorAction">Texto Show</h1> -->
 
-        <!-- <router-view></router-view> -->
-        <!--Manejo de clases con Bin-->
-        <!-- <h1 v-bind:class="{ error: errorAction, ok: !errorAction}">Esto es una texto</h1> -->
-        <!--No lo renderiza-->
-        <!-- <h1 v-if="errorAction">Texto if</h1> -->
-        <!--Lo oculta con css-->
-        <!-- <h1 v-show="errorAction">Texto Show</h1> -->
+            <!-- <div v-html="content_html"></div> -->
+            <!-- <img v-bind:src="src" :alt="text" :title="text"> -->
+            <!-- {{ message }} -->
+            <!-- <p>Computed reverse message: "{{ reversedMessage }}"</p> -->
+            <!-- <p>{{ calcularSuma(sum, sum) }}</p> -->
+            <!-- <p>El valor de sum es: "{{ sum }}"</p> -->
+            <!-- <button @click="incremental">++</button> -->
+            <!-- <button v-on:click="decremental">--</button> -->
+            <!-- <h1 :style="{color:'blue', fontSize: numero+'px'}">Hola Mundo {{ numero }}</h1> -->
 
-        <!-- <div v-html="content_html"></div> -->
-        <!-- <img v-bind:src="src" :alt="text" :title="text"> -->
-        <!-- {{ message }} -->
-        <!-- <p>Computed reverse message: "{{ reversedMessage }}"</p> -->
-        <!-- <p>{{ calcularSuma(sum, sum) }}</p> -->
-        <!-- <p>El valor de sum es: "{{ sum }}"</p> -->
-        <!-- <button @click="incremental">++</button> -->
-        <!-- <button v-on:click="decremental">--</button> -->
-        <!-- <h1 :style="{color:'blue', fontSize: numero+'px'}">Hola Mundo {{ numero }}</h1> -->
+            <!--Actualizamos en dos vias-->
+            <!-- <input v-model="edad" placeholder="edit me"> -->
+            <!-- <p>Message is: {{ edad }}</p> -->
+            <!-- Fin v1 -->
 
-        <!--Actualizamos en dos vias-->
-        <!-- <input v-model="edad" placeholder="edit me"> -->
-        <!-- <p>Message is: {{ edad }}</p> -->
-        <!-- Fin v1 -->
-
+        </div>
     </div>
-    <script src="js/component/Lists.js"></script>
+    <script src="js/component/ListsPerson.js"></script>
+    <script src="js/component/ListsPrograming.js"></script>
+    <script src="js/component/ListAlert.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

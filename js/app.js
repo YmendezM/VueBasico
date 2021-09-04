@@ -12,7 +12,7 @@ var app = new Vue({
     el: '#app',
     router,
     data:{
-        img_prosp: "https://static.wikia.nocookie.net/doblaje/images/7/79/Naruto-Shippuden-PNG-File.png/revision/latest/top-crop/width/360/height/450?cb=20180819151446&path-prefix=es"
+        img_prosp: "https://static.wikia.nocookie.net/doblaje/images/7/79/Naruto-Shippuden-PNG-File.png/revision/latest/top-crop/width/360/height/450?cb=20180819151446&path-prefix=es"  
     },
     mounted() {
         console.log(this.$route)

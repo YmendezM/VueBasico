@@ -11,31 +11,6 @@ const router = new VueRouter({
 var app = new Vue({
     el: '#app',
     router,
-    data: {
-        message: 'Hello Word',
-        sum : 3+6,
-        value : 6,
-        isVisible : true,
-        people : ['Ysrael', 'Ely', 'Montse'],
-        content_html : "<h1>Hola Mundo</h1>",
-        text: "Descripcion de nuestra imagen",
-        src: "asset/images.jpeg",
-        numero: 13,
-        edad: '',
-        errorAction: true
-    },
-    methods: {
-        filterPeople: function(){
-            this.people = this.people.filter(
-                person => {
-                    return person.length > 5
-                }
-            )
-            console.log(this.people)
-        }
-
-        
-    },
     mounted() {
         console.log(this.$route)
     },

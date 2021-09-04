@@ -4,6 +4,7 @@ const router = new VueRouter({
             { path: '/list_person', redirect: '/list_person_all'},
             { path: '/list_person_all', component: ListsPerson },
             { path: '/list_programing', component: ListsPrograming },
+            { path: '/list_person_select', component: ListsPersonSelect },
             { path: '*', component: PageNotFound }
         ]
 });

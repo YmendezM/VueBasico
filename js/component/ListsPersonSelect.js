@@ -6,22 +6,40 @@ const ListsPersonSelect = {
                 <label>Nombre</label>
                 <input type="text" class="form-control" v-model="filterField">
         </div>
-        <select>
+        <br>
+        <select class="form-select">
             <option v-if="filter(person)" v-for="(person, index) in people" :value="index">{{ person }}</option>
         </select>
-        <div class="form-group">
-                <label>Nombre</label>
-                <input type="text" class="form-control" v-model="filterFieldTable">
+        <br>
+        <div class="container overflow-hidden">
+            <div class="row gy-5">
+                <div class="col-8">   
+                    <div class="form-group">
+                        <div class="row gy-5">
+                            <div class="col-1">
+                                <label>Nombre</label>
+                            </div>
+                            <div class="col-10">
+                                <input type="text" class="form-control" v-model="filterFieldTable">
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-check"">
+                        <label>Inactivo</label>
+                        <input type="checkbox" class="form-check-input" v-on:click="filterFieldTableActivo = 0" v-model="filterFieldTableInactivo">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-check">
+                        <label>Activo</label>
+                        <input type="checkbox" class="form-check-input" v-on:click="filterFieldTableInactivo = 0" v-model="filterFieldTableActivo">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="form-group">
-                <label>Inactivo</label>
-                <input type="checkbox" v-model="filterFieldTableInactivo">
-        </div>
-        <div class="form-group">
-                <label>Activo</label>
-                <input type="checkbox" v-model="filterFieldTableActivo">
-        </div>
-        
+        <br>
         <table class="table">
         <thead>
             <tr>
